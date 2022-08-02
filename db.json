@@ -1,3 +1,28 @@
 {
-  "users": []
+  
+  "dogs": [
+        {
+          "name": "Remington",
+          "image":"https:\/\/images.dog.ceo\/breeds\/beagle\/n02088364_3171.jpg",
+          "breed": "Beagle"
+        },
+        {
+          "name": "Sir Barksalot",
+          "image":"https:\/\/images.dog.ceo\/breeds\/bulldog-french\/n02108915_1343.jpg",
+          "breed": "French Bulldog"
+        },
+        {
+          "name": "Bear",
+          "image":"https:\/\/images.dog.ceo\/breeds\/papillon\/n02086910_399.jpg",
+          "breed": "Papillon"
+        },
+        {
+          "name": "Chase",
+          "image":"https:\/\/images.dog.ceo\/breeds\/newfoundland\/n02111277_3297.jpg",
+          "breed": "Newfoundland"
+        }
+        ]
+       
+        
+    
 }
