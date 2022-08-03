@@ -8,6 +8,7 @@ let dogPoster = document.querySelector('.detail_image')
 let saveBtn = document.querySelector('#save_button')
 let dogArray = []
 const dogForm = document.getElementById('new-dog')
+let keyPicture = document.getElementById('pic')
 
 
 
@@ -15,6 +16,7 @@ fetch(dogJson)
     .then(response => response.json())
     .then(dogs => {
         renderDogs(dogs)
+        dogArray = dogs
     })
 
 function renderDogs(dogs) {
@@ -65,25 +67,37 @@ dogForm.addEventListener('submit', (e) => {
     
     })
 
+let next = 0;
 
-
-
-
-
-
-
-
-
-    // function handleImageAppending(jsonObject) {
-    //     let dogImageContainer = document.getElementById('dog-image-container')
-    //     let arrOfDogsURLs = jsonObject.message;
-    //     arrOfDogsURLs.forEach(url => {
-    //         dogImageContainer.innerHTML += makeImageTagString(url)
-    //     const image = document.querySelector('img')
-    //     image.addEventListener('click', () => console.log(e.target))
-    //     })
-    // }
+document.addEventListener('keydown', (event) =>  {
+  let pages = ["https:\/\/images.dog.ceo\/breeds\/bulldog-french\/n02108915_1343.jpg", 
+                "https:\/\/images.dog.ceo\/breeds\/beagle\/n02088364_3171.jpg",
+                "https:\/\/images.dog.ceo\/breeds\/papillon\/n02086910_399.jpg",
+                "https:\/\/images.dog.ceo\/breeds\/newfoundland\/n02111277_3297.jpg"
+            ];
+  
+  if (event.code === "ArrowRight") {
+    if (next >= 0 && next < pages.length - 1) {
+      next++;
+    } else {
+      next = 0;
+    };
+    keyPicture.src = pages[next];
+  };
+  if (event.code === "ArrowLeft") {
+    if (next >= 0) {
+      next--;
+    } else {
+      next = pages.length - 1;
+    };
+    keyPicture.src = pages[next];
+  };
+    if (event.code === "space") {
+        let i = Math.floor(Math.random() * pages.length) + 1;
+        keyPicture.src = pages[i];
+    };
     
-    // function makeImageTagString(url){
-    //     return `<img src="${url}"/>`
-    // }
+    
+    
+  console.log(event.code)
+});
