@@ -7,6 +7,7 @@ let dogBreed = document.querySelector('.breed')
 let dogPoster = document.querySelector('.detail_image')
 let saveBtn = document.querySelector('#save_button')
 let dogArray = []
+const dogForm = document.getElementById('new-dog')
 
 
 
@@ -46,6 +47,23 @@ function saveToAdopt(image) {
         console.log(image)
         
     }
+
+dogForm.addEventListener('submit', (e) => {
+    e.preventDefault()
+        
+    
+    let newDog = {
+        name: e.target.name.value,
+        breed: e.target.breed.value,
+        image: e.target.image.value,
+    }
+    
+    dogArray.push(newDog)
+    console.log(dogArray)
+    renderDogs(dogArray.slice(-1))
+        
+    
+    })
 
 
 
