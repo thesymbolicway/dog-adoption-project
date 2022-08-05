@@ -5,10 +5,19 @@ h1 {
   text-align: center;
 }
 
+h6 {
+  font-size: larger;
+  text-align: center;
+}
+
 body {
   text-align: center;
-  max-width: 50%;
-  max-height: 50%;
+  background-color: #FFFF;
+  background: -moz-linear-gradient(top, #FFFFFF 0%, #2388CB 51%, #2592DB 100%);
+  background: -webkit-linear-gradient(top, #FFFFFF 0%, #2388CB 51%, #2592DB 100%);
+  background: linear-gradient(to bottom, #FFFFFF 0%, #2388CB 51%, #2592DB 100%);
+  text-align: center;
+
 }
 
 img {
@@ -17,14 +26,30 @@ img {
 }
 
 #container {
-  height:100%;
   text-align: center;
   font-family:'Oxygen';
   color: #fefefe;
 }
 #pic{
   height: 400px;
+  width: 500px;
 }
-/* body{
-  background-image:url(http://www.designbolts.com/wp-content/uploads/2012/11/Free-Topographic-Map-Seamless-pattern.jpg);
-} */
+
+img {
+  float: center;
+  width: 420px;
+  height: 300px;
+  object-fit: cover;
+}
+
+h5 {
+  font-size: larger;
+}
+
+#save_button {
+  color: rgb(0, 0, 0); font-size: 30px; line-height: 30px; padding: 16px; border-radius: 44px; font-family: “Comic Sans MS”, cursive, sans-serif; font-weight: normal; text-decoration: none; font-style: normal; font-variant: normal; text-transform: none; background-image: linear-gradient(rgb(255, 255, 255) 0%, rgb(35, 136, 203) 51%, rgb(37, 146, 219) 100%); box-shadow: rgb(0, 0, 0) 5px 5px 15px 5px; border: 21px solid rgb(151, 162, 164); display: inline-block;}
+  .myButton:hover {
+  background: #FFFFFF; }
+  .myButton:active {
+  background: #2592DB; }
+
